@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    /* wrapper: 100%; */
+}
+body{
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    display: grid;
+    font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #000000;
+}
+.circle{
+    position: fixed;
+    height: 100vmin;
+    width: 100vmin;
+    top: -50vmin;
+    left: -50vmin;
+    translate: -50%,0;
+    background-color: rgba(0, 0, 139, 0.456);
+    border-radius: 50%;
+}
+.circle2{
+    /* content: " "; */
+    position: fixed;
+    height: 100vmin;
+    width: 100vmin;
+    bottom: -60%;
+    right: -20%;
+    translate: -50%,0;
+    border-radius: 50%;
+    background-color:rgba(22, 123, 205, 0.619); 
+}
+.card{
+    position: relative;
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    z-index: 4;
+    background-color:rgba(150, 146, 217, 0.268);
+    padding: 170px 150px 80px 80px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.card::before{
+    content: " ";
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    top: -880px;
+    left: -50%;
+    translate: -50%, 0;
+    border-radius: 50%;
+    background-color: rgba(145, 207, 230, 0.623);
+}
+.card>.logo{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    top: 30px;
+    left: 80%;
+    translate: -50%, 0;
+    transition: all 0.375s;
+    background-color: #cfc9c98c;
+}
+.card>.logo>i:hover{
+    color: rgba(8, 107, 97, 0.568);
+}
+.logo>i{
+    font-size: 1.8rem;
+    font-weight: 200;
+    color: rgba(0, 0, 255, 0.733);
+}
+h2{
+    font-family: inherit;
+    font-size: 2rem;
+    color: rgba(50, 50, 199, 0.764);
+    margin-top: 10px;
+}
+.form{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 18px;
+}
+.form>input,.form>button{
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    padding: 0px 20px;
+    border-radius: 25px;
+    border: 0;
+    color: #f5f5f5;
+    background-color: rgba(14, 89, 89, 0.801);
+}
+.form>input::placeholder{
+    font-size: 16px;
+    color: rgba(6, 6, 6, 0.933);
+    transition: all 0.375s;
+}
+.form>input:hover{
+    cursor: pointer;
+    background-color: rgba(11, 129, 129, 0.212);
+}
+.checkbox{
+    font-size: 17px;
+    border: 0;
+    position: relative;
+    left: 50px;
+    display: flex;
+    flex-direction: row;
+    color: rgba(0, 128, 128, 0.641);
+    transition: all 0.375s;
+}
+.checkbox>input{
+border: #cfc9c98c;
+}
+.checkbox>label{
+  margin-left: 10px;
+  color: rgba(64, 101, 224, 0.677);
+}
+.checkbox>label:hover{
+    color: rgba(64, 77, 224, 0.401);
+}
+.form>button{
+    width: 80%;
+    height: 40px;
+    padding: 0px 30px;
+    border: 0.1px solid rgba(0, 0, 0, 0.464);
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(19, 165, 165, 0.645);
+    transform: all 0.375s;
+}
+.form>button:hover{
+    cursor: pointer;
+    transform: scale(20px);
+    background-color: rgba(10, 155, 155, 0.305);
+    color: rgb(28, 246, 246);
+    border: none;
+    font-weight: 400;
+}
+.footer{
+    font-size: 17px;
+    font-family: inherit;
+    font-weight: 200;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.786);
+    transition: all 0.375s;
+}
+.footer>a{
+    text-decoration: none;
+    color: rgba(0, 0, 255, 0.93);
+}
+.footer>i{
+    position: relative;
+    top: 7px;
+    left: 90px;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    color: rgba(50, 191, 207, 0.888);
+    transition: all 0.375s;
+    /* display: flex; */
+}
+.footer>i:hover{
+    color: turquoise;
+}
+.footer>a:hover{
+    color: rgba(14, 149, 164, 0.722);
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        padding: 0;
+    }
+    .card{
+        margin: 0;
+        width: 360px;
+    }
+}
+@media screen and (max-width:450px){
+    .form>button{
+      font-size: 14px;
+      margin-top: 15px;
+      width: 100%;
+    }
+    .footer>i{
+        left: 10px;
+    }
+    .checkbox>label{
+        font-size: 15px;
+        position: absolute;
+        flex-direction: column;
+        left: -20px;
+        /* display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center; */
+    }
+    .checkbox>input{
+        position: absolute;
+        left: -40px;
+    }
+}
